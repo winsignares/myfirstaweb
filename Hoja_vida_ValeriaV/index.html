@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hoja de Vida | Valeria Carolina Villa Mendoza</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -21,238 +21,139 @@
 
         .cv {
             width: 850px;
-            min-height: 1100px;
             margin: auto;
             background: white;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 18px rgba(0,0,0,.15);
         }
 
-        /* ENCABEZADO */
-
-        .header {
-            padding: 45px 50px 35px;
-            position: relative;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+        .encabezado {
+            padding: 40px 50px 35px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
         }
 
         .nombre {
-            width: 55%;
-        }
-
-        .nombre h1 {
             font-size: 32px;
-            line-height: 1.25;
-            color: #242424;
+            color: #172b40;
             letter-spacing: 1px;
+            line-height: 1.35;
         }
 
-        .cargo {
-            margin-top: 30px;
-            font-size: 15px;
+        .profesion {
+            color: #172b40;
+            margin-top: 25px;
+            font-size: 14px;
             font-weight: bold;
-            letter-spacing: 2px;
-            color: #292929;
+            letter-spacing: 3px;
         }
-
-        /* FOTO */
-
-        .foto-container {
-            width: 145px;
-            height: 145px;
-            overflow: hidden;
-            border-radius: 50%;
-            border: 3px solid #222;
-            margin-right: 15px;
-        }
-
-        .foto-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* CONTACTO */
 
         .contacto {
-            position: absolute;
-            top: 50px;
-            right: 50px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-right: 165px;
+            gap: 14px;
+            margin-top: 5px;
         }
 
-        .contacto-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 13px;
-            color: #333;
+        .contacto p {
+            font-size: 12px;
+            color: #172b40;
         }
 
-        .icono {
-            width: 25px;
-            height: 25px;
+        .foto {
+            width: 145px;
+            height: 145px;
             border-radius: 50%;
-            background: #222;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
+            object-fit: cover;
+            border: 3px solid #222;
         }
 
-        /* PERFIL */
+        .foto-contenedor {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
 
         .perfil {
-            padding: 0 50px 40px;
+            padding: 10px 50px 35px;
         }
 
         .perfil p {
+            color: #172b40;
             font-size: 13px;
-            line-height: 1.55;
-            color: #333;
+            line-height: 1.7;
             text-align: justify;
         }
-
-        /* LINEA */
 
         .separador {
             height: 2px;
             background: #222;
-            width: 100%;
+            margin: 0;
         }
-
-        /* CONTENIDO INFERIOR */
 
         .contenido {
-            padding: 45px 50px;
-        }
-
-        .columnas {
+            padding: 35px 50px 45px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 65px;
+            column-gap: 70px;
+            row-gap: 35px;
         }
 
-        .seccion {
-            margin-bottom: 40px;
-        }
-
-        .titulo {
-            font-size: 21px;
-            font-weight: bold;
-            color: #292929;
+        .seccion h2 {
+            font-size: 20px;
+            color: #172b40;
             margin-bottom: 18px;
         }
 
-        /* EDUCACIÓN */
-
-        .educacion-item {
+        .educacion p {
+            color: #172b40;
+            font-size: 13px;
+            line-height: 1.5;
             margin-bottom: 18px;
         }
 
-        .educacion-item .fecha {
-            font-size: 13px;
+        .educacion strong {
             font-weight: bold;
-            color: #333;
-            margin-bottom: 3px;
         }
 
-        .educacion-item h4 {
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 4px;
-            color: #292929;
-        }
-
-        .educacion-item p {
-            font-size: 13px;
-            color: #333;
-            line-height: 1.4;
-        }
-
-        /* HABILIDADES */
-
-        .habilidades {
+        .habilidades ul {
             columns: 2;
-            column-gap: 35px;
+            padding-left: 18px;
         }
 
         .habilidades li {
+            color: #172b40;
             font-size: 12px;
             margin-bottom: 10px;
-            color: #333;
-            padding-left: 2px;
-        }
-
-        /* CERTIFICACIONES */
-
-        .certificaciones {
-            margin-top: 10px;
-        }
-
-        .certificaciones li {
-            font-size: 12px;
-            color: #333;
-            margin-bottom: 14px;
-            line-height: 1.4;
             padding-left: 3px;
         }
 
-        /* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
-
-        @media (max-width: 900px) {
-
-            body {
-                padding: 10px;
-            }
-
-            .cv {
-                width: 100%;
-            }
-
-            .header {
-                padding: 30px;
-            }
-
-            .nombre {
-                width: 100%;
-            }
-
-            .nombre h1 {
-                font-size: 27px;
-            }
-
-            .foto-container {
-                width: 110px;
-                height: 110px;
-            }
-
-            .contacto {
-                position: static;
-                margin: 20px 0 0;
-            }
-
-            .perfil {
-                padding: 0 30px 30px;
-            }
-
-            .contenido {
-                padding: 30px;
-            }
-
-            .columnas {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+        .tecnologias {
+            grid-column: 1 / 3;
         }
+
+        .tecnologias p {
+            color: #172b40;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .certificaciones {
+            grid-column: 1 / 3;
+        }
+
+        .certificaciones ul {
+            padding-left: 18px;
+        }
+
+        .certificaciones li {
+            color: #172b40;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
     </style>
 </head>
 
@@ -261,60 +162,42 @@
     <div class="cv">
 
         <!-- ENCABEZADO -->
+        <div class="encabezado">
 
-        <header class="header">
+            <div>
+                <h1 class="nombre">
+                    VALERIA CAROLINA<br>
+                    VILLA MENDOZA
+                </h1>
 
-            <div class="header-content">
+                <p class="profesion">
+                    INGENIERA DE SISTEMAS
+                </p>
+            </div>
 
-                <div class="nombre">
+            <div class="foto-contenedor">
 
-                    <h1>
-                        VALERIA CAROLINA<br>
-                        VILLA MENDOZA
-                    </h1>
-
-                    <div class="cargo">
-                        INGENIERA DE SISTEMAS
-                    </div>
-
+                <div class="contacto">
+                    <p>☎ &nbsp; 3023925511</p>
+                    <p>✉ &nbsp; valeca1206@gmail.com</p>
                 </div>
 
-                <!-- FOTO -->
-                <div class="foto-container">
-                    <img src="foto.jpg" alt="Foto de Valeria Carolina Villa Mendoza">
-                </div>
+                <img src="foto.jpg" alt="Foto de Valeria Carolina Villa Mendoza" class="foto">
 
             </div>
 
-            <!-- CONTACTO -->
-
-            <div class="contacto">
-
-                <div class="contacto-item">
-                    <div class="icono">☎</div>
-                    <span>3023925511</span>
-                </div>
-
-                <div class="contacto-item">
-                    <div class="icono">✉</div>
-                    <span>valeca1206@gmail.com</span>
-                </div>
-
-            </div>
-
-        </header>
+        </div>
 
 
         <!-- PERFIL -->
-
-        <section class="perfil">
+        <div class="perfil">
 
             <p>
                 Soy una persona proactiva, organizada y responsable, con habilidades para
                 trabajar en equipo y comunicarme efectivamente. Me adapto con facilidad a
                 diferentes situaciones y aprendo rápidamente, lo que me permite enfrentar
-                nuevos retos con entusiasmo. Actualmente curso Ingeniería de Sistemas,
-                lo que me ha brindado conocimientos técnicos básicos y herramientas digitales.
+                nuevos retos con entusiasmo. Actualmente curso Ingeniería de Sistemas, lo
+                que me ha brindado conocimientos técnicos básicos y herramientas digitales.
                 Estoy en búsqueda de mi primer empleo para aplicar mis conocimientos,
                 desarrollar nuevas habilidades y contribuir al crecimiento de la empresa.
                 Me caracterizo por mantener una actitud positiva y ser comprometida con mis
@@ -322,120 +205,93 @@
                 profesionalmente.
             </p>
 
-        </section>
+        </div>
 
-
-        <!-- SEPARADOR -->
 
         <div class="separador"></div>
 
 
         <!-- CONTENIDO -->
+        <div class="contenido">
 
-        <main class="contenido">
+            <!-- EDUCACIÓN -->
+            <div class="seccion educacion">
 
-            <div class="columnas">
+                <h2>EDUCACIÓN</h2>
 
-                <!-- EDUCACIÓN -->
+                <p>
+                    <strong>2024 - En curso</strong><br>
+                    <strong>Universidad Libre</strong><br>
+                    Ingeniería de Sistemas
+                </p>
 
-                <section class="seccion">
+                <p>
+                    <strong>2023</strong><br>
+                    <strong>Colegio Distrital Marie Poussepin</strong><br>
+                    Bachiller académico
+                </p>
 
-                    <h2 class="titulo">
-                        EDUCACIÓN
-                    </h2>
-
-                    <div class="educacion-item">
-
-                        <div class="fecha">
-                            2024 - En curso
-                        </div>
-
-                        <h4>
-                            Universidad Libre
-                        </h4>
-
-                        <p>
-                            Ingeniería de Sistemas
-                        </p>
-
-                    </div>
+            </div>
 
 
-                    <div class="educacion-item">
+            <!-- HABILIDADES -->
+            <div class="seccion habilidades">
 
-                        <div class="fecha">
-                            2023
-                        </div>
+                <h2>HABILIDADES</h2>
 
-                        <h4>
-                            Colegio Distrital Marie Poussepin
-                        </h4>
+                <ul>
+                    <li>Adaptabilidad</li>
+                    <li>Aprendizaje rápido</li>
+                    <li>Comunicación efectiva</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Responsabilidad</li>
+                    <li>Análisis de datos</li>
+                    <li>Microsoft Suite</li>
+                    <li>Google Workspace</li>
+                    <li>Proactividad</li>
+                    <li>Atención al cliente</li>
+                    <li>Excel</li>
+                </ul>
 
-                        <p>
-                            Bachiller académico
-                        </p>
-
-                    </div>
-
-                </section>
+            </div>
 
 
-                <!-- HABILIDADES -->
+            <!-- HERRAMIENTAS Y TECNOLOGÍAS -->
+            <div class="seccion tecnologias">
 
-                <section class="seccion">
+                <h2>HERRAMIENTAS Y TECNOLOGÍAS</h2>
 
-                    <h2 class="titulo">
-                        HABILIDADES
-                    </h2>
-
-                    <ul class="habilidades">
-
-                        <li>Adaptabilidad</li>
-                        <li>Aprendizaje rápido</li>
-                        <li>Comunicación efectiva</li>
-                        <li>Trabajo en equipo</li>
-                        <li>Responsabilidad</li>
-                        <li>Análisis de datos</li>
-                        <li>Microsoft Suite</li>
-                        <li>Google Workspace</li>
-                        <li>Javascript</li>
-                        <li>Proactividad</li>
-                        <li>Atención al cliente</li>
-                        <li>Excel</li>
-
-                    </ul>
-
-                </section>
+                <p>
+                    Conocimientos básicos en desarrollo web con HTML y programación en
+                    Python. Manejo intermedio de GitHub y conocimientos
+                    intermedios-avanzados en Java. Experiencia avanzada en MySQL y
+                    Microsoft Excel para la gestión, organización y análisis de
+                    información.
+                </p>
 
             </div>
 
 
             <!-- CERTIFICACIONES -->
+            <div class="seccion certificaciones">
 
-            <section class="seccion certificaciones">
-
-                <h2 class="titulo">
-                    CERTIFICACIONES
-                </h2>
+                <h2>CERTIFICACIONES</h2>
 
                 <ul>
-
                     <li>
                         Alianza canadiense. Inglés B2.
                     </li>
 
-                 <li>
-    Bootcamp Análisis de Datos - Nivel Básico
-    (159 horas).<br>
-    Ministerio TIC - Universidad Libre - Etraining.
-    Diciembre de 2025.
-</li>
-
+                    <li>
+                        Bootcamp Análisis de Datos - Nivel Básico (159 horas).<br>
+                        Ministerio TIC - Universidad Libre - Etraining.
+                        Diciembre de 2025.
+                    </li>
                 </ul>
 
-            </section>
+            </div>
 
-        </main>
+        </div>
 
     </div>
 

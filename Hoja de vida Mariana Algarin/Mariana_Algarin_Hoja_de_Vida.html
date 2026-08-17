@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Vida | Mariana Algarin Pedrozo</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#fdf5f8;
+    color:#4b3b43;
+    line-height:1.6;
+    padding:35px 15px;
+}
+
+.cv{
+    max-width:980px;
+    margin:auto;
+    background:white;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(130,80,105,.15);
+}
+
+header{
+    background:linear-gradient(135deg,#f7d6e4,#eadcf6);
+    padding:30px 45px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.foto-perfil{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #e8a6bd;
+    flex-shrink:0;
+}
+
+h1{font-size:40px;color:#704c61}
+.sub{font-size:18px;color:#795f6c}
+.tag{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 14px;
+    border-radius:20px;
+    background:white;
+    color:#a15f7d;
+    font-weight:600;
+}
+
+main{display:grid;grid-template-columns:1fr 1.7fr}
+
+aside{
+    background:#fff8fb;
+    padding:30px;
+    border-right:1px solid #f1dce5;
+}
+
+section{padding:30px 38px}
+
+h2{
+    color:#9a5f7b;
+    font-size:19px;
+    margin-bottom:14px;
+    border-bottom:2px solid #f0d9e3;
+    padding-bottom:7px;
+}
+
+.block{margin-bottom:25px}
+ul{list-style:none}
+li{margin:8px 0}
+.contact li strong{color:#8b5870}
+
+.skill{margin:10px 0}
+.skill b{font-size:14px;color:#684e5b}
+
+.bar{
+    height:6px;
+    background:#f0e2e8;
+    border-radius:10px;
+    margin-top:4px;
+}
+
+.bar i{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#d995b2,#b99ad6);
+    border-radius:10px;
+}
+
+.item{margin-bottom:20px}
+.item h3{color:#765269;font-size:17px}
+.date{font-size:13px;color:#aa7b91}
+
+.pill{
+    display:inline-block;
+    background:#f6e7ef;
+    color:#8b5a72;
+    padding:4px 10px;
+    border-radius:15px;
+    margin:3px;
+    font-size:13px;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:#fff8fb;
+    color:#a47b8d;
+    font-size:12px;
+}
+
+@media(max-width:700px){
+    header{padding:25px;flex-direction:column;text-align:center}
+    h1{font-size:32px}
+    main{grid-template-columns:1fr}
+    aside{border-right:0;border-bottom:1px solid #f1dce5}
+}
+</style>
+</head>
+
+<body>
+
+<div class="cv">
+
+<header>
+    <img src="foto-mariana.jpg" alt="Foto de Mariana Algarin Pedrozo" class="foto-perfil">
+
+    <div>
+        <h1>Mariana Algarin Pedrozo</h1>
+        <div class="sub">Estudiante de Ingeniería de Sistemas</div>
+        <div class="tag">Tecnología · Creatividad · Aprendizaje</div>
+    </div>
+</header>
+
+<main>
+
+<aside>
+
+<div class="block">
+<h2>Contacto</h2>
+<ul class="contact">
+<li><strong>Ciudad:</strong> Barranquilla, Colombia</li>
+<li><strong>Teléfono:</strong> 3023481403</li>
+<li><strong>Correo:</strong> marialgarin2006@gmail.com</li>
+</ul>
+</div>
+
+<div class="block">
+<h2>Habilidades</h2>
+
+<div class="skill"><b>HTML</b><div class="bar"><i style="width:62%"></i></div></div>
+<div class="skill"><b>Java</b><div class="bar"><i style="width:57%"></i></div></div>
+<div class="skill"><b>MySQL</b><div class="bar"><i style="width:68%"></i></div></div>
+<div class="skill"><b>Python</b><div class="bar"><i style="width:57%"></i></div></div>
+<div class="skill"><b>Git y GitHub</b><div class="bar"><i style="width:62%"></i></div></div>
+<div class="skill"><b>Power BI</b><div class="bar"><i style="width:60%"></i></div></div>
+<div class="skill"><b>Trabajo en equipo</b><div class="bar"><i style="width:80%"></i></div></div>
+
+</div>
+
+<div class="block">
+<h2>Idiomas</h2>
+<p><b>Español:</b> Nativo</p>
+<p><b>Inglés:</b> Básico/Intermedio</p>
+</div>
+
+<div class="block">
+<h2>Intereses</h2>
+<span class="pill">Inteligencia Artificial</span>
+<span class="pill">Ciberseguridad</span>
+<span class="pill">Bases de datos</span>
+<span class="pill">Desarrollo web</span>
+</div>
+
+</aside>
+
+<section>
+
+<div class="block">
+<h2>Perfil</h2>
+<p>Soy estudiante de Ingeniería de Sistemas, con interés en el área de tecnología y en el aprendizaje constante. Me caracterizo por ser responsable, creativa, comprometida y con disposición para trabajar en equipo y adquirir nuevos conocimientos.</p>
+</div>
+
+<div class="block">
+<h2>Formación Académica</h2>
+
+<div class="item">
+<h3>Estudiante de Ingeniería de Sistemas</h3>
+<div class="date">Universidad Libre · Actualmente cursando 6.º semestre</div>
+<p>Formación en programación, bases de datos, redes, desarrollo web y fundamentos de ciencia de datos.</p>
+</div>
+
+<div class="item">
+<h3>Bachillerato</h3>
+<div class="date">Institución Educativa Distrital Pestalozzi · Finalizado</div>
+</div>
+</div>
+
+<div class="block">
+<h2>Certificaciones</h2>
+
+<div class="item">
+<h3>Análisis de Datos — Nivel Básico</h3>
+<div class="date">Bootcamp Talento Tech · Universidad Libre y Etraining · Diciembre de 2025</div>
+<p>Certificación de 159 horas enfocada en fundamentos de análisis de datos y herramientas tecnológicas.</p>
+</div>
+
+</div>
+
+<div class="block">
+<h2>Competencias</h2>
+<ul>
+<li>• Responsabilidad y compromiso.</li>
+<li>• Facilidad para aprender nuevas herramientas.</li>
+<li>• Comunicación y trabajo colaborativo.</li>
+<li>• Organización y resolución de problemas.</li>
+</ul>
+</div>
+
+<div class="block">
+<h2>Objetivo Profesional</h2>
+<p>Continuar desarrollando mis conocimientos en Ingeniería de Sistemas y adquirir experiencia en inteligencia artificial, ciberseguridad, bases de datos y desarrollo de soluciones tecnológicas.</p>
+</div>
+
+</section>
+</main>
+
+<footer>Mariana Algarin Pedrozo · Hoja de Vida · Ingeniería de Sistemas</footer>
+
+</div>
+</body>
+</html>

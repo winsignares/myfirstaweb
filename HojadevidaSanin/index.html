@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Hoja de Vida | Santiago Sanín Suárez Rivera
+  </title>
+
+
+  <style>
+
+    :root {
+      --primary: #172554;
+      --accent: #2563eb;
+      --light: #f1f5f9;
+      --text: #1e293b;
+      --muted: #64748b;
+      --white: #ffffff;
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      background: #e8eef5;
+
+      color: var(--text);
+
+      line-height: 1.6;
+
+    }
+
+
+    /* CONTENEDOR PRINCIPAL */
+
+    .page {
+
+      max-width: 1050px;
+
+      margin: 35px auto;
+
+      background: var(--white);
+
+      display: grid;
+
+      grid-template-columns: 310px 1fr;
+
+      min-height: 1200px;
+
+      box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.12);
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+    }
+
+
+    /* BARRA LATERAL */
+
+    aside {
+
+      background: var(--primary);
+
+      color: white;
+
+      padding: 38px 30px;
+
+    }
+
+
+    /* FOTO */
+
+    .foto {
+
+      width: 150px;
+
+      height: 180px;
+
+      margin: 0 auto 20px;
+
+      overflow: hidden;
+
+      border-radius: 8px;
+
+      border: 3px solid rgba(255,255,255,0.3);
+
+      background: #dbeafe;
+
+    }
+
+
+    .foto img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+    }
+
+
+    /* PERFIL */
+
+    .profile {
+
+      text-align: center;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .profile h1 {
+
+      font-size: 24px;
+
+      line-height: 1.2;
+
+    }
+
+
+    .profile p {
+
+      color: #bfdbfe;
+
+      margin-top: 8px;
+
+      font-size: 14px;
+
+    }
+
+
+    /* SECCIONES LATERALES */
+
+    .side-section {
+
+      margin-top: 28px;
+
+    }
+
+
+    .side-section h2 {
+
+      font-size: 13px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+
+      color: #93c5fd;
+
+      padding-bottom: 9px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.18);
+
+      margin-bottom: 13px;
+
+    }
+
+
+    /* CONTACTO */
+
+    .contact p {
+
+      font-size: 13px;
+
+      margin: 10px 0;
+
+      word-break: break-word;
+
+    }
+
+
+    .contact strong {
+
+      display: block;
+
+      color: #dbeafe;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+    }
+
+
+    /* HABILIDADES */
+
+    .skill {
+
+      margin: 12px 0;
+
+      font-size: 13px;
+
+    }
+
+
+    /* CONTENIDO PRINCIPAL */
+
+    main {
+
+      padding: 42px 48px;
+
+    }
+
+
+    /* INTRODUCCIÓN */
+
+    .intro {
+
+      background: var(--light);
+
+      border-left: 5px solid var(--accent);
+
+      padding: 22px 24px;
+
+      border-radius: 8px;
+
+      margin-bottom: 30px;
+
+      color: #334155;
+
+    }
+
+
+    /* SECCIONES */
+
+    section {
+
+      margin-bottom: 32px;
+
+    }
+
+
+    section h2 {
+
+      color: var(--primary);
+
+      font-size: 19px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.8px;
+
+      margin-bottom: 16px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+    }
+
+
+    section h2::after {
+
+      content: "";
+
+      height: 2px;
+
+      flex: 1;
+
+      background: #dbe3ed;
+
+    }
+
+
+    /* FORMACION */
+
+    .item {
+
+      position: relative;
+
+      padding: 0 0 18px 20px;
+
+      margin-bottom: 18px;
+
+      border-left: 2px solid #dbeafe;
+
+    }
+
+
+    .item::before {
+
+      content: "";
+
+      width: 9px;
+
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      position: absolute;
+
+      left: -5.5px;
+
+      top: 7px;
+
+    }
+
+
+    .item h3 {
+
+      font-size: 16px;
+
+      color: #0f172a;
+
+    }
+
+
+    .item .date {
+
+      font-size: 12px;
+
+      color: var(--accent);
+
+      font-weight: 700;
+
+      margin: 2px 0 5px;
+
+    }
+
+
+    .item p {
+
+      font-size: 14px;
+
+      color: #475569;
+
+    }
+
+
+    /* DATOS PERSONALES */
+
+    .data-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px 25px;
+
+    }
+
+
+    .data {
+
+      padding: 12px 14px;
+
+      background: #f8fafc;
+
+      border-radius: 7px;
+
+      border: 1px solid #e2e8f0;
+
+    }
+
+
+    .data small {
+
+      display: block;
+
+      color: var(--muted);
+
+      text-transform: uppercase;
+
+      font-size: 10px;
+
+      letter-spacing: 0.5px;
+
+    }
+
+
+    .data span {
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+    }
+
+
+    /* REFERENCIAS */
+
+    .reference {
+
+      background: #f8fafc;
+
+      padding: 14px 16px;
+
+      border-radius: 8px;
+
+      border: 1px solid #e2e8f0;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .reference h3 {
+
+      font-size: 14px;
+
+    }
+
+
+    .reference p {
+
+      font-size: 13px;
+
+      color: #64748b;
+
+    }
+
+
+    /* PIE DE PAGINA */
+
+    footer {
+
+      max-width: 1050px;
+
+      margin: -20px auto 30px;
+
+      text-align: center;
+
+      color: #64748b;
+
+      font-size: 12px;
+
+    }
+
+
+    /* CELULARES */
+
+    @media (max-width: 800px) {
+
+      .page {
+
+        grid-template-columns: 1fr;
+
+        margin: 0;
+
+        border-radius: 0;
+
+      }
+
+
+      aside {
+
+        padding: 30px 24px;
+
+      }
+
+
+      main {
+
+        padding: 30px 24px;
+
+      }
+
+
+      .data-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      footer {
+
+        margin: 15px;
+
+      }
+
+    }
+
+
+    /* IMPRESION */
+
+    @media print {
+
+      body {
+
+        background: white;
+
+      }
+
+
+      .page {
+
+        margin: 0;
+
+        box-shadow: none;
+
+        max-width: none;
+
+      }
+
+
+      footer {
+
+        display: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- PAGINA PRINCIPAL -->
+
+  <div class="page">
+
+
+    <!-- BARRA LATERAL -->
+
+    <aside>
+
+
+      <!-- FOTO -->
+
+      <div class="foto">
+
+        <img
+          src="foto.jpg"
+          alt="Foto de Santiago Sanín Suárez Rivera"
+        >
+
+      </div>
+
+
+      <!-- NOMBRE -->
+
+      <div class="profile">
+
+        <h1>
+
+          Santiago Sanín<br>
+
+          Suárez Rivera
+
+        </h1>
+
+
+        <p>
+
+          Estudiante de Ingeniería en Sistemas
+
+        </p>
+
+      </div>
+
+
+      <!-- CONTACTO -->
+
+      <div class="side-section contact">
+
+        <h2>
+
+          Contacto
+
+        </h2>
+
+
+        <p>
+
+          <strong>
+            Celular
+          </strong>
+
+          301 754 1406
+
+        </p>
+
+
+        <p>
+
+          <strong>
+            Email
+          </strong>
+
+          saninsrzz@gmail.com
+
+        </p>
+
+
+        <p>
+
+          <strong>
+            Dirección
+          </strong>
+
+          Calle 62 B # 12b -16
+
+        </p>
+
+
+        <p>
+
+          <strong>
+            Barrio
+          </strong>
+
+          Nuevo Milenio, Soledad –
+          Atlántico
+
+        </p>
+
+      </div>
+
+
+      <!-- PERFIL -->
+
+      <div class="side-section">
+
+        <h2>
+          Perfil
+        </h2>
+
+
+        <p
+          style="
+          font-size:13px;
+          color:#dbeafe;
+          "
+        >
+
+          Estudiante en formación de
+          Ingeniería en Sistemas,
+          caracterizado por mi creatividad,
+          compromiso y disposición para
+          realizar de manera responsable
+          y eficiente cualquier actividad
+          que se me ofrezca.
+
+        </p>
+
+      </div>
+
+
+      <!-- COMPETENCIAS -->
+
+      <div class="side-section">
+
+        <h2>
+          Competencias
+        </h2>
+
+
+        <div class="skill">
+
+          Programación orientada a objetos
+
+        </div>
+
+
+        <div class="skill">
+
+          Bases de datos
+
+        </div>
+
+
+        <div class="skill">
+
+          Análisis de sistemas
+
+        </div>
+
+
+        <div class="skill">
+
+          Soporte tecnológico
+
+        </div>
+
+
+        <div class="skill">
+
+          Trabajo en equipo
+
+        </div>
+
+
+        <div class="skill">
+
+          Adaptabilidad y aprendizaje rápido
+
+        </div>
+
+      </div>
+
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+
+      <!-- PERFIL PROFESIONAL -->
+
+      <div class="intro">
+
+        <p>
+
+          Me considero una persona proactiva,
+          dedicada y con excelente actitud
+          frente a nuevos retos. Destaco por
+          mi habilidad para trabajar en equipo,
+          seguir instrucciones, proponer ideas
+          cuando es necesario y asumir
+          responsabilidades con seriedad.
+
+          Mi objetivo es adquirir experiencia,
+          aportar mis capacidades y continuar
+          desarrollando mis competencias
+          mientras contribuyo positivamente
+          en cualquier área donde se me
+          brinde la oportunidad.
+
+        </p>
+
+      </div>
+
+
+      <!-- DATOS PERSONALES -->
+
+      <section>
+
+        <h2>
+          Datos personales
+        </h2>
+
+
+        <div class="data-grid">
+
+
+          <div class="data">
+
+            <small>
+              Nombre completo
+            </small>
+
+            <span>
+              Santiago Sanín Suárez Rivera
+            </span>
+
+          </div>
+
+
+          <div class="data">
+
+            <small>
+              Documento
+            </small>
+
+            <span>
+              C.C. No. 1.042.254.177
+            </span>
+
+          </div>
+
+
+          <div class="data">
+
+            <small>
+              Lugar de nacimiento
+            </small>
+
+            <span>
+              Barranquilla, Atlántico
+            </span>
+
+          </div>
+
+
+          <div class="data">
+
+            <small>
+              Fecha de nacimiento
+            </small>
+
+            <span>
+              15/10/2007
+            </span>
+
+          </div>
+
+
+          <div class="data">
+
+            <small>
+              Estado civil
+            </small>
+
+            <span>
+              Soltero
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- FORMACION -->
+
+      <section>
+
+        <h2>
+          Formación académica
+        </h2>
+
+
+        <!-- UNIVERSIDAD -->
+
+        <div class="item">
+
+          <h3>
+            Ingeniería de Sistemas
+          </h3>
+
+
+          <div class="date">
+
+            En curso · 4.º semestre
+
+          </div>
+
+
+          <p>
+
+            <strong>
+              Universidad Libre – Barranquilla
+            </strong>
+
+            <br>
+
+            Título a obtener:
+            Ingeniero de Sistemas.
+
+            Programa semestralizado
+            de 8 semestres.
+
+          </p>
+
+        </div>
+
+
+        <!-- TECNICO -->
+
+        <div class="item">
+
+          <h3>
+
+            Técnico en Programación
+            de Software
+
+          </h3>
+
+
+          <div class="date">
+
+            28 de noviembre de 2023
+
+          </div>
+
+
+          <p>
+
+            <strong>
+
+              SENA –
+              Centro Nacional Colombo Alemán
+
+            </strong>
+
+          </p>
+
+        </div>
+
+
+        <!-- BACHILLERATO -->
+
+        <div class="item">
+
+          <h3>
+
+            Bachiller Académico
+
+          </h3>
+
+
+          <div class="date">
+
+            2023 · Soledad, Atlántico
+
+          </div>
+
+
+          <p>
+
+            <strong>
+
+              Institución Educativa
+              Villa Estadio
+
+            </strong>
+
+          </p>
+
+        </div>
+
+
+        <!-- CURSO SENA -->
+
+        <div class="item">
+
+          <h3>
+
+            Desarrollo de Habilidades
+            Digitales para la Comunicación
+            y Colaboración en Línea
+
+          </h3>
+
+
+          <div class="date">
+
+            9 de agosto de 2023 · 48 horas
+
+          </div>
+
+
+          <p>
+
+            <strong>
+              SENA
+            </strong>
+
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+      <!-- REFERENCIAS -->
+
+      <section>
+
+        <h2>
+
+          Referencias personales
+
+        </h2>
+
+
+        <div class="reference">
+
+          <h3>
+
+            Arcelia Gonzales Ibáñez
+
+          </h3>
+
+          <p>
+
+            Auxiliar de Droguería
+            · Tel. 301 778 2216
+
+          </p>
+
+        </div>
+
+
+        <div class="reference">
+
+          <h3>
+
+            Osmanys Martínez Rodríguez
+
+          </h3>
+
+          <p>
+
+            Médico General
+            · Tel. 315 417 0034
+
+          </p>
+
+        </div>
+
+
+        <div class="reference">
+
+          <h3>
+
+            Jhoann Suárez Orozco
+
+          </h3>
+
+          <p>
+
+            Ingeniero Industrial
+            · Tel. 300 727 7190
+
+          </p>
+
+        </div>
+
+
+        <div class="reference">
+
+          <h3>
+
+            José Carlos Suárez Orozco
+
+          </h3>
+
+          <p>
+
+            Docente
+            · Tel. 300 299 0175
+
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+      <!-- OBJETIVO -->
+
+      <section>
+
+        <h2>
+
+          Objetivo profesional
+
+        </h2>
+
+
+        <p
+          style="
+          font-size:14px;
+          color:#475569;
+          "
+        >
+
+          Adquirir experiencia laboral,
+          aportar los conocimientos adquiridos
+          durante la formación en Ingeniería
+          de Sistemas y continuar fortaleciendo
+          las competencias técnicas y personales
+          en un entorno profesional.
+
+        </p>
+
+      </section>
+
+
+    </main>
+
+  </div>
+
+
+  <!-- PIE -->
+
+  <footer>
+
+    Hoja de vida · Santiago Sanín Suárez Rivera
+
+  </footer>
+
+
+</body>
+
+</html>

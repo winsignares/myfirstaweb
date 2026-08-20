@@ -1,19 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informacion Personal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javier Solano Moreno - CV</title>
+<style>
+  :root{
+    --bg:#0a1628; --panel:#0f2138; --panel2:#122a47; --accent:#2dd4bf; --accent2:#c9a961;
+    --text:#e8edf4; --muted:#8a9bb3; --border:#1e3a5f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Segoe UI', system-ui, sans-serif;
+    background:var(--bg); color:var(--text);
+    display:flex; justify-content:center; padding:40px 20px;
+  }
+  .cv{
+    width:100%; max-width:900px; background:var(--panel);
+    border-radius:12px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.5);
+  }
+  header{
+    background:linear-gradient(135deg,#0f2f52,#0a1628);
+    padding:44px; display:flex; align-items:center; gap:26px; flex-wrap:wrap;
+    border-bottom:3px solid var(--accent2);
+  }
+  .avatar{
+    width:110px; height:110px; border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),#0d9488); color:#0a1628; font-weight:700;
+    font-size:2.2rem; display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; box-shadow:0 0 0 4px rgba(45,212,191,.15);
+  }
+  header h1{font-size:2rem; letter-spacing:.3px;}
+  header p{color:#a8c5e0; margin-top:6px; font-size:1rem;}
+  header .badge{
+    display:inline-block; margin-top:12px; padding:4px 14px; border:1px solid var(--accent2);
+    color:var(--accent2); border-radius:20px; font-size:.78rem; letter-spacing:.5px;
+  }
+  nav{
+    display:flex; gap:0; background:#081222; border-bottom:2px solid var(--border);
+  }
+  nav button{
+    flex:1; padding:16px; background:none; border:none; color:var(--muted);
+    font-size:.95rem; cursor:pointer; transition:.2s; font-weight:500;
+    border-bottom:3px solid transparent;
+  }
+  nav button.active{color:var(--accent); background:var(--panel); border-bottom:3px solid var(--accent);}
+  nav button:hover{color:#c7dcee;}
+  section{display:none; padding:36px 42px;}
+  section.active{display:block; animation:fade .3s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+  h2{color:var(--accent2); font-size:1.1rem; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:18px; border-bottom:1px solid var(--border); padding-bottom:10px;}
+  .lead{color:#c7d6e6; font-size:.98rem; line-height:1.7; margin-bottom:18px;}
+  .highlights{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-top:20px;}
+  .highlight{background:var(--panel2); border:1px solid var(--border); border-left:3px solid var(--accent); padding:14px 16px; border-radius:8px;}
+  .highlight strong{display:block; color:var(--accent); font-size:.85rem; text-transform:uppercase; letter-spacing:.5px; margin-bottom:4px;}
+  .highlight span{color:var(--muted); font-size:.85rem;}
+  .item{margin-bottom:24px; background:var(--panel2); border:1px solid var(--border); border-radius:10px; padding:18px 20px;}
+  .item h3{font-size:1.08rem; color:#f1f5f9;}
+  .item .meta{color:var(--accent); font-size:.82rem; font-weight:600; letter-spacing:.3px; display:block; margin-top:2px;}
+  .item p{margin-top:10px; color:#c2d2e2; font-size:.92rem; line-height:1.6;}
+  .item ul{margin-top:8px; padding-left:18px; color:#b8c9db; font-size:.88rem; line-height:1.7;}
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .tag{background:var(--panel2); border:1px solid var(--accent); color:var(--accent); padding:5px 13px; border-radius:20px; font-size:.8rem;}
+  .skill-group{margin-bottom:22px;}
+  .skill-group h4{color:#dbe7f2; font-size:.9rem; margin-bottom:10px; letter-spacing:.3px;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .contact-grid div{background:var(--panel2); border:1px solid var(--border); padding:14px 16px; border-radius:8px; font-size:.9rem;}
+  footer{text-align:center; padding:18px; color:var(--muted); font-size:.75rem; background:#081222; border-top:1px solid var(--border);}
+</style>
 </head>
 <body>
-    <h1>Informacion Personal</h1>
-    <p>Nombre: Javier Solano</p>
-    <p>Edad: 18 años</p>
-    <p>Ciudad: Barranquilla</p>
-    <p>País: Colombia</p>
-    <p>Email: javier.solano@gmail.com</p>
-    <p>Telefono: 3178456923</p>
-    <p>Direccion: Calle 123, Ciudad 123, Pais 123</p>
-    <p>Codigo Postal: 08001</p>
+
+<div class="cv">
+  <header>
+    <div class="avatar">JS</div>
+    <div>
+      <h1>Javier Solano Moreno</h1>
+      <p>Estudiante de Ingeniería de Sistemas — Universidad Libre, Barranquilla</p>
+      <span class="badge">Desarrollo Full-Stack · Bases de Datos · Aplicaciones de Escritorio</span>
+    </div>
+  </header>
+
+  <nav>
+    <button class="active" data-tab="perfil">Perfil</button>
+    <button data-tab="proyectos">Proyectos</button>
+    <button data-tab="habilidades">Habilidades</button>
+    <button data-tab="contacto">Contacto</button>
+  </nav>
+
+  <section id="perfil" class="active">
+    <h2>Perfil Profesional</h2>
+    <p class="lead">Estudiante de Ingeniería de Sistemas en la Universidad Libre, sede Barranquilla, con formación práctica orientada al desarrollo de software completo: desde el diseño de bases de datos y modelado de datos, hasta la construcción de interfaces web y de escritorio. Ha trabajado de forma consistente en proyectos académicos que replican flujos de trabajo reales de ingeniería de software — planificación, arquitectura, implementación, pruebas y documentación — abarcando tanto el desarrollo backend con Python y frameworks como Flask, como el desarrollo frontend con JavaScript, TypeScript y frameworks modernos como Next.js y React.</p>
+    <p class="lead">Su portafolio combina aplicaciones web (redes sociales académicas, e-commerce, juegos de trivia) con software de escritorio (gestión de flotas, trivia con interfaz gráfica), demostrando versatilidad entre distintos paradigmas de desarrollo y stacks tecnológicos.</p>
+
+    <div class="highlights">
+      <div class="highlight">
+        <strong>Formación</strong>
+        <span>Ingeniería de Sistemas — Universidad Libre, Barranquilla</span>
+      </div>
+      <div class="highlight">
+        <strong>Enfoque</strong>
+        <span>Desarrollo Full-Stack &amp; Bases de Datos</span>
+      </div>
+      <div class="highlight">
+        <strong>Proyectos activos</strong>
+        <span>5 proyectos de software documentados</span>
+      </div>
+      <div class="highlight">
+        <strong>Stacks</strong>
+        <span>Python · JS/TS · Java · SQL</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos Destacados</h2>
+
+    <div class="item">
+      <h3>RIUL — Red Social Académica</h3>
+      <span class="meta">Flask + Docker (backend) · JavaScript puro (frontend)</span>
+      <p>Plataforma de red social orientada al ámbito académico, diseñada para conectar estudiantes en torno a contenido educativo. Backend construido en Flask y contenerizado con Docker para facilitar despliegue y portabilidad; frontend desarrollado en JavaScript puro, sin frameworks, priorizando control total sobre el DOM y el rendimiento.</p>
+      <ul>
+        <li>Arquitectura backend desacoplada del frontend, comunicándose vía API</li>
+        <li>Entorno reproducible mediante contenedores Docker</li>
+        <li>Gestión de usuarios y contenido con enfoque en escalabilidad académica</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>TriviaLibre / Mundo de Preguntas</h3>
+      <span class="meta">Python · CustomTkinter · MySQL</span>
+      <p>Aplicación de escritorio de trivia desarrollada como proyecto para el curso de Ingeniería de Software, con entrega en junio de 2026. Interfaz gráfica construida con CustomTkinter y persistencia de datos en MySQL.</p>
+      <ul>
+        <li>Interfaz gráfica moderna sobre Tkinter mediante CustomTkinter</li>
+        <li>Modelo de datos relacional para preguntas, categorías y puntuaciones</li>
+        <li>Desarrollado bajo metodología de curso, con entregables y cronograma definidos</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>QuizGame</h3>
+      <span class="meta">Next.js 15 · TypeScript · Tailwind CSS</span>
+      <p>Juego de trivia web construido sobre el App Router de Next.js 15, tipado con TypeScript y estilizado con Tailwind CSS. Incluyó una fase dedicada de auditoría de código y corrección de errores para mejorar estabilidad y mantenibilidad.</p>
+      <ul>
+        <li>Tipado estático end-to-end con TypeScript</li>
+        <li>Estilos utilitarios con Tailwind para consistencia visual</li>
+        <li>Proceso de revisión y depuración (bug fixing) documentado</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>Fleet Manager</h3>
+      <span class="meta">JavaFX · Base de datos relacional</span>
+      <p>Aplicación de escritorio para gestión de flotas vehiculares, con interfaz construida en JavaFX. Incluye diseño de base de datos desde cero, modelado mediante diagrama entidad-relación (ERD) y un pipeline de importación de datos.</p>
+      <ul>
+        <li>Diseño e implementación de esquema relacional (ERD)</li>
+        <li>Interfaz de usuario personalizada con estilos propios en JavaFX</li>
+        <li>Pipeline de importación de datos externos hacia la base de datos</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>GroceryStore</h3>
+      <span class="meta">Flask · MySQL</span>
+      <p>Aplicación de comercio electrónico desarrollada bajo arquitectura MVC (Modelo-Vista-Controlador), con backend en Flask y base de datos MySQL. Proyecto llevado a un estado finalizado y probado.</p>
+      <ul>
+        <li>Separación clara de responsabilidades mediante patrón MVC</li>
+        <li>Modelo de datos relacional para productos, usuarios y pedidos</li>
+        <li>Proyecto completado y validado mediante pruebas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades Técnicas</h2>
+
+    <div class="skill-group">
+      <h4>Backend &amp; APIs</h4>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Arquitectura MVC</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Frontend Web</h4>
+      <div class="tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">React</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">HTML / CSS</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Aplicaciones de Escritorio</h4>
+      <div class="tags">
+        <span class="tag">JavaFX</span>
+        <span class="tag">CustomTkinter</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h4>Bases de Datos &amp; Infraestructura</h4>
+      <div class="tags">
+        <span class="tag">MySQL</span>
+        <span class="tag">Modelado ERD</span>
+        <span class="tag">Docker</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contact-grid">
+      <div>📧 javiersolano@gmail.com</div>
+      <div>📱 +57 313 799 3998</div>
+      <div>📍 Barranquilla, Colombia</div>
+      <div>🎓 Universidad Libre - BAQ</div>
+    </div>
+  </section>
+
+  <footer>CV generado dinámicamente · Javier Solano Moreno</footer>
+</div>
+
+<script>
+  document.querySelectorAll('nav button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
 </body>
 </html>

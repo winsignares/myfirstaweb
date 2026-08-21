@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida | Gabriel Enrique Rodriguez Vasquez</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #e8e8e8;
+            padding: 30px;
+        }
+
+        .cv {
+            width: 850px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 6px 18px rgba(0,0,0,.15);
+        }
+
+        .encabezado {
+            padding: 40px 50px 35px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+        }
+
+        .nombre {
+            font-size: 32px;
+            color: #172b40;
+            letter-spacing: 1px;
+            line-height: 1.35;
+        }
+
+        .profesion {
+            color: #172b40;
+            margin-top: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .contacto {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 5px;
+        }
+
+        .contacto p {
+            font-size: 12px;
+            color: #172b40;
+        }
+
+        .foto {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #222;
+        }
+
+        .foto-contenedor {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .perfil {
+            padding: 10px 50px 35px;
+        }
+
+        .perfil p {
+            color: #172b40;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .separador {
+            height: 2px;
+            background: #222;
+            margin: 0;
+        }
+
+        .contenido {
+            padding: 35px 50px 45px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 70px;
+            row-gap: 35px;
+        }
+
+        .seccion h2 {
+            font-size: 20px;
+            color: #172b40;
+            margin-bottom: 18px;
+        }
+
+        .educacion p {
+            color: #172b40;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        .educacion strong {
+            font-weight: bold;
+        }
+
+        .educacion span.fecha {
+            display: block;
+            font-size: 11px;
+            color: #555;
+        }
+
+        .habilidades ul {
+            columns: 2;
+            padding-left: 18px;
+        }
+
+        .habilidades li {
+            color: #172b40;
+            font-size: 12px;
+            margin-bottom: 10px;
+            padding-left: 3px;
+        }
+
+        .idiomas p {
+            color: #172b40;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .ancho-completo {
+            grid-column: 1 / 3;
+        }
+
+        .ancho-completo p {
+            color: #172b40;
+            font-size: 13px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .experiencia .item {
+            margin-bottom: 22px;
+        }
+
+        .experiencia .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experiencia .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .experiencia .item-header strong {
+            font-size: 14px;
+            color: #172b40;
+        }
+
+        .experiencia .item-header span {
+            font-size: 11px;
+            color: #555;
+        }
+
+        .experiencia .item p {
+            font-size: 13px;
+            color: #172b40;
+            line-height: 1.6;
+            text-align: justify;
+            margin-top: 6px;
+        }
+
+        .proyectos ul,
+        .certificaciones ul {
+            padding-left: 18px;
+        }
+
+        .proyectos li,
+        .certificaciones li {
+            color: #172b40;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .referencias .item {
+            font-size: 13px;
+            color: #172b40;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .referencias .item strong {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="cv">
+
+        <!-- ENCABEZADO -->
+        <div class="encabezado">
+
+            <div>
+                <h1 class="nombre">
+                    Gabriel Enrique Rodriguez Vasquez
+                </h1>
+
+                <p class="profesion">
+                    PROGRAMADOR
+                </p>
+            </div>
+
+            <div class="foto-contenedor">
+
+                <div class="contacto">
+                    <p>☎ &nbsp; +57 3045218872</p>
+                    <p>✉ &nbsp; gabrielrodriguezvqz@gmail.com</p>
+                    <p>📍 &nbsp; Barranquilla, Colombia</p>
+                </div>
+
+                <img src="foto.jpeg" alt="Foto de Gabriel Enrique Rodriguez Vasquez" class="foto">
+
+            </div>
+
+        </div>
+
+
+        <!-- PERFIL -->
+        <div class="perfil">
+
+            <p>
+                Estudiante de Ingeniería de Sistemas en la Universidad Libre, apasionado por el desarrollo backend y frontend de soluciones tecnológicas y análisis de datos. Con orientación a resolver problemas, busco una posición como practicante para aplicar conocimientos en programación y bases de datos, contribuyendo al éxito de proyectos, departamentos de TI y tecnologías emergentes. He desarrollado proyectos utilizando Python y Java para el desarrollo de aplicaciones, junto con MySQL como sistema de gestión de bases de datos, fortaleciendo mis habilidades técnicas y mi capacidad para ofrecer soluciones funcionales. Soy apasionado por la atención al cliente y me enfoco en brindar una experiencia satisfactoria que genere lealtad, no solo por los productos, sino también por los servicios.
+            </p>
+
+        </div>
+
+
+        <div class="separador"></div>
+
+
+        <!-- CONTENIDO -->
+        <div class="contenido">
+
+            <!-- EDUCACIÓN -->
+            <div class="seccion educacion">
+
+                <h2>EDUCACIÓN</h2>
+
+                <p>
+                    <strong>Ingeniería en Sistemas</strong><br>
+                    Universidad Libre - Sede Centro<br>
+                    <span class="fecha">Actualidad · Barranquilla</span>
+                </p>
+
+                <p>
+                    <strong>Bachillerato Académico</strong><br>
+                    Colegio Nuestra Señora del Pilar<br>
+                    <span class="fecha">02/2017 – 11/2023 · Barranquilla</span>
+                </p>
+
+                <p>
+                    <strong>Curso de Python de 0 a Mid</strong><br>
+                    Fundación Código Abierto<br>
+                    <span class="fecha">06/2025 – 08/2025 · Bquilla/Colombia</span>
+                </p>
+
+            </div>
+
+
+            <!-- HABILIDADES -->
+            <div class="seccion habilidades">
+
+                <h2>HABILIDADES</h2>
+
+                <ul>
+                    <li>Pensamiento Crítico</li>
+                    <li>Resolución de Problemas</li>
+                    <li>Gestión del Tiempo</li>
+                    <li>Adaptabilidad</li>
+                    <li>Trabajo en Equipo</li>
+                    <li>Atención al Cliente</li>
+                    <li>Fundamento en Python</li>
+                    <li>Fundamento en Java</li>
+                    <li>Fundamento en MySQL</li>
+                </ul>
+
+            </div>
+
+
+            <!-- IDIOMAS -->
+            <div class="seccion idiomas">
+
+                <h2>IDIOMAS</h2>
+
+                <p><strong>Español</strong> — Nativo/Bilingüe</p>
+                <p><strong>Inglés</strong> — Avanzado</p>
+
+            </div>
+
+
+            <!-- EXPERIENCIA -->
+            <div class="seccion experiencia ancho-completo">
+
+                <h2>EXPERIENCIA</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <strong>Atención al Cliente — Alfonso Areiza (freelance)</strong>
+                        <span>03/2024 – 08/2025 · Bquilla/Colombia</span>
+                    </div>
+                    <p>
+                        Como freelancer contratado por Alfonso Areiza, brindé soporte y atención personalizada a clientes, ofreciendo soluciones tecnológicas adaptadas a sus necesidades. Me encargué de la comunicación directa con los usuarios, resolución de incidencias y acompañamiento durante el uso de los servicios, garantizando una experiencia satisfactoria y fortaleciendo la relación cliente–proveedor mediante una atención ágil, empática y orientada a resultados.
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <strong>Atención al Cliente — Bar &amp; Restaurante</strong>
+                        <span>Bquilla/Colombia</span>
+                    </div>
+                    <p>
+                        Responsable de la atención al cliente, toma de pedidos y entrega de alimentos y bebidas, asegurando una experiencia de servicio eficiente y satisfactoria. Colaboración con el equipo de cocina y barra para optimizar el flujo de trabajo y garantizar la calidad del servicio. Orientación al cliente y resolución de incidencias de forma ágil y proactiva.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- PROYECTOS -->
+            <div class="seccion proyectos ancho-completo">
+
+                <h2>PROYECTOS</h2>
+
+                <ul>
+                    <li>
+                        <strong>To-Do List</strong> (01/08/2025) — API usando FastAPI. Proyecto realizado con el fin de que las personas tengan la posibilidad de organizar sus tareas por medio de una lista interactiva.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- HERRAMIENTAS Y TECNOLOGÍAS -->
+            <div class="seccion ancho-completo">
+
+                <h2>HERRAMIENTAS Y TECNOLOGÍAS</h2>
+
+                <p>
+                    Conocimientos básicos en desarrollo web con HTML y programación en Python. Manejo intermedio de GitHub y conocimientos intermedios-avanzados en Java. Experiencia avanzada en MySQL y Microsoft Excel para la gestión, organización y análisis de información.
+                </p>
+
+            </div>
+
+
+            <!-- CERTIFICACIONES -->
+            <div class="seccion certificaciones ancho-completo">
+
+                <h2>CERTIFICACIONES</h2>
+
+                <ul>
+                    <li>
+                        Alianza Canadiense. Inglés B2.
+                    </li>
+                    <li>
+                        Bootcamp Análisis de Datos - Nivel Básico (159 horas). Ministerio TIC - Universidad Libre - Etraining. Diciembre de 2025.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- REFERENCIAS -->
+            <div class="seccion referencias ancho-completo">
+
+                <h2>REFERENCIAS</h2>
+
+                <div class="item">
+                    <strong>Jessicka Castro</strong>, Coordinadora, 4yousee<br>
+                    jcastrovq@gmail.com · +57 3046432127
+                </div>
+
+                <div class="item">
+                    <strong>Alfonso Areiza</strong>, Desarrollador<br>
+                    alfareiza@gmail.com · +57 3045951544
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

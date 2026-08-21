@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Vida — Jaider Ramos</title>
+<style>
+  :root{
+    --tinta:#1d2430;
+    --tinta-suave:#4a5568;
+    --linea:#d9dee6;
+    --acento:#2f5d50;
+    --fondo:#ffffff;
+    --fondo-lateral:#f4f6f5;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    background:#e9ebee;
+    font-family:'Georgia', 'Times New Roman', serif;
+    color:var(--tinta);
+    display:flex;
+    justify-content:center;
+    padding:32px 12px;
+  }
+
+  .hoja{
+    width:210mm;
+    min-height:297mm;
+    background:var(--fondo);
+    box-shadow:0 0 18px rgba(0,0,0,0.15);
+    display:grid;
+    grid-template-columns:70mm 1fr;
+  }
+
+  /* ---------- COLUMNA LATERAL ---------- */
+  .lateral{
+    background:var(--fondo-lateral);
+    padding:14mm 8mm;
+    border-right:1px solid var(--linea);
+  }
+
+  .foto{
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    background:#dde3e0;
+    border:1px solid var(--linea);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+    color:#8a94a3;
+    text-align:center;
+    margin-bottom:8mm;
+  }
+
+  .lateral h3{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--acento);
+    margin:6mm 0 3mm 0;
+    border-bottom:1px solid var(--linea);
+    padding-bottom:2mm;
+  }
+
+  .lateral h3:first-of-type{ margin-top:0; }
+
+  .dato-contacto{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:10.5px;
+    color:var(--tinta-suave);
+    margin-bottom:2mm;
+    word-break:break-word;
+  }
+
+  .lista-simple{
+    list-style:none;
+    padding:0;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:10.5px;
+    color:var(--tinta-suave);
+  }
+
+  .lista-simple li{ margin-bottom:2mm; }
+
+  .habilidad{ margin-bottom:3mm; }
+  .habilidad span{
+    display:block;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:10.5px;
+    margin-bottom:1mm;
+    color:var(--tinta);
+  }
+  .barra-fondo{
+    background:#dde3e0;
+    height:5px;
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .barra-relleno{
+    background:var(--acento);
+    height:100%;
+    width:75%;
+  }
+
+  /* ---------- COLUMNA PRINCIPAL ---------- */
+  .principal{ padding:14mm 12mm; }
+
+  .encabezado{ margin-bottom:8mm; }
+
+  .encabezado h1{
+    font-size:26px;
+    margin:0;
+    letter-spacing:0.5px;
+  }
+
+  .encabezado .cargo{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12.5px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--acento);
+    margin-top:2mm;
+  }
+
+  .seccion{ margin-bottom:7mm; }
+
+  .seccion h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--acento);
+    border-bottom:2px solid var(--acento);
+    padding-bottom:2mm;
+    margin:0 0 4mm 0;
+  }
+
+  .perfil-texto{
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--tinta-suave);
+    margin:0;
+  }
+
+  .item{ margin-bottom:5mm; }
+  .item:last-child{ margin-bottom:0; }
+
+  .item-fila{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:2mm;
+  }
+
+  .item-titulo{
+    font-size:13.5px;
+    font-weight:bold;
+    margin:0;
+  }
+
+  .item-empresa{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:var(--acento);
+  }
+
+  .item-fecha{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:10.5px;
+    color:var(--tinta-suave);
+    white-space:nowrap;
+  }
+
+  .item ul{
+    margin:2mm 0 0 0;
+    padding-left:4.5mm;
+    font-size:11.5px;
+    line-height:1.55;
+    color:var(--tinta-suave);
+  }
+
+  .item ul li{ margin-bottom:1mm; }
+
+  /* ---------- IMPRESIÓN ---------- */
+  @media print{
+    body{ background:none; padding:0; }
+    .hoja{ box-shadow:none; width:auto; min-height:auto; }
+    @page{ size:A4; margin:0; }
+  }
+
+  @media (max-width:720px){
+    .hoja{ grid-template-columns:1fr; width:100%; }
+    .lateral{ border-right:none; border-bottom:1px solid var(--linea); }
+  }
+</style>
+</head>
+<body>
+
+<div class="hoja">
+
+  <!-- ================= COLUMNA LATERAL ================= -->
+  <aside class="lateral">
+
+    <img src="../IMG/jaider.png" class="foto" alt="Retrato de Jaider Ramos, presentado en su hoja de vida profesional como desarrollador web">
+
+    <h3>Contacto</h3>
+    <div class="dato-contacto">📍 Barranquilla, Colombia</div>
+    <div class="dato-contacto">📞 +57 305 292 2141</div>
+    <div class="dato-contacto">✉️ jramossolano15@gmail.com</div>
+    <div class="dato-contacto">💻 github.com/Craki28</div>
+
+    <h3>Habilidades técnicas</h3>
+    <div class="habilidad">
+      <span>Programación web</span>
+      <div class="barra-fondo"><div class="barra-relleno" style="width:85%"></div></div>
+    </div>
+    <div class="habilidad">
+      <span>Desarrollo de aplicaciones</span>
+      <div class="barra-fondo"><div class="barra-relleno" style="width:70%"></div></div>
+    </div>
+    <div class="habilidad">
+      <span>Base de datos</span>
+      <div class="barra-fondo"><div class="barra-relleno" style="width:60%"></div></div>
+    </div>
+    <div class="habilidad">
+      <span>Mantenimiento y soporte técnico</span>
+      <div class="barra-fondo"><div class="barra-relleno" style="width:80%"></div></div>
+    </div>
+
+    <h3>Idiomas</h3>
+    <ul class="lista-simple">
+      <li>Español — Nativo</li>
+      <li>Inglés — Nivel intermedio</li>
+    </ul>
+
+  </aside>
+
+  <!-- ================= COLUMNA PRINCIPAL ================= -->
+  <main class="principal">
+
+    <header class="encabezado">
+      <h1>Jaider Ramos</h1>
+      <div class="cargo">Desarrollador Web</div>
+    </header>
+
+    <section class="seccion">
+      <h2>Perfil profesional</h2>
+      <p class="perfil-texto">
+        Desarrollador web en formación, con estudios en Ingeniería de Sistemas en la Universidad Libre
+        y experiencia previa en mantenimiento de computadores en Munso Sistemas (Riohacha, 2022–2026).
+        Combino conocimientos técnicos en soporte y hardware con habilidades en programación web,
+        desarrollo de aplicaciones y bases de datos, respaldadas por proyectos personales full-stack.
+        Busco una oportunidad para aplicar y seguir desarrollando mis competencias como desarrollador web.
+      </p>
+    </section>
+
+    <section class="seccion">
+      <h2>Experiencia</h2>
+
+      <div class="item">
+        <div class="item-fila">
+          <p class="item-titulo">Técnico de Mantenimiento de Computadores</p>
+          <span class="item-fecha">2022 — 2026</span>
+        </div>
+        <div class="item-empresa">Munso Sistemas · Riohacha</div>
+        <ul>
+          <li>Realicé mantenimiento preventivo y correctivo de equipos de cómputo.</li>
+          <li>Brindé soporte técnico y diagnóstico de fallas de hardware y software.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="seccion">
+      <h2>Proyectos destacados</h2>
+
+      <div class="item">
+        <div class="item-fila">
+          <p class="item-titulo">FERREX — Sistema de inventario para ferretería</p>
+          <span class="item-fecha">2026</span>
+        </div>
+        <div class="item-empresa">MySQL · Node.js / Express · HTML, CSS y JavaScript</div>
+        <ul>
+          <li>Diseñé y desarrollé un sistema full-stack de inventario con base de datos de 9 tablas, vistas, procedimientos almacenados, triggers, cursores y usuarios con roles diferenciados.</li>
+          <li>Presenté el proyecto como sustentación formal, con grabación de demostración y documentación de soporte.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-fila">
+          <p class="item-titulo">Plataforma de apuestas para torneo FC26</p>
+          <span class="item-fecha">2026</span>
+        </div>
+        <div class="item-empresa">Supabase · JavaScript · Tiempo real</div>
+        <ul>
+          <li>Desarrollé una aplicación web en tiempo real para gestionar apuestas entre amigos durante un torneo de FC26, con panel de administración independiente.</li>
+          <li>Implementé apuestas P2P, chat en vivo, notificaciones push y tabla de posiciones actualizada en tiempo real usando Supabase como backend.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-fila">
+          <p class="item-titulo">Aplicación de medición por cámara en tiempo real</p>
+          <span class="item-fecha">2026</span>
+        </div>
+        <div class="item-empresa">Python · Streamlit · OpenCV · Visión artificial</div>
+        <ul>
+          <li>Construí una aplicación en Python con Streamlit capaz de tomar medidas de objetos en tiempo real a partir de la cámara, combinando OpenCV con un modelo de visión de IA.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="seccion">
+      <h2>Educación</h2>
+
+      <div class="item">
+        <div class="item-fila">
+          <p class="item-titulo">Ingeniería de Sistemas</p>
+          <span class="item-fecha">Año — Año</span>
+        </div>
+        <div class="item-empresa">Universidad Libre</div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>
